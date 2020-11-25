@@ -5,7 +5,8 @@ import Home from "../views/Home.vue";
 import Demo from "../views/Demo.vue";
 import Detail from "../views/Detail.vue";
 import Feature from "../components/Feature.vue";
-//import Login from "../views/Login.vue";
+import About from "../views/About.vue";
+import Security from "../views/Security.vue";
 import Dashboard from "../views/Dashboard.vue";
 import Subscribe from "../components/Subscribe.vue";
 
@@ -17,6 +18,11 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home
+  },
+  {
+    path: "/About",
+    name: "About",
+    component: About
   },
   {
     path: "/demo",
@@ -39,6 +45,12 @@ const routes = [
     name: "Subscribe",
     component: Subscribe
   },
+  {
+    path: "/Security",
+    name: "Security",
+    component: Security
+  },
+
   /*{
     path: newLocal,
     redirect: {

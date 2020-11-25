@@ -1,33 +1,81 @@
 <template>
-  <b-navbar toggleable type="dark" variant="dark" position="fixed">
+  <b-navbar toggleable type="dark" variant="" sticky> 
+   
+    <div class="before-header">
+      <a href="" class="phone">Chat with our sales</a>
+      <a href="" class="phone">+2348160238112</a>
+    
+      <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-twitter-square"></i>
+
+      </div>
     <b-navbar-brand href="#"
       >Topnorch
       <b-image src="logo-1.png" />
+      <a href="#" @click="gotoFeature()">Features</a>
+    
+      
+      <a href="#" @click="gotoAbout()">About us</a>
+       <a href="#" @click="gotoSecurity()">Security $ Trust</a>
+       
+       <a href="#"
+              v-b-modal.modal-prevent-closing
+              variant="primary"
+              size="sm"
+              width="5%"
+              
+            >
+              Pricing</a
+            >
+            <b-modal
+              id="modal-prevent-closing"
+              class="chat"
+              @show="resetModal"
+              @hidden="resetModal"
+              @ok="handleOk"
+              ok-only="yes"
+              ok-title="Submit"
+              
+              button-size="sm"
+              footer-class="p-2 border-top-0"
+              header-class="p-2 border-bottom-0"
+              body-bg-variant="primray"
+               
+        
+            >
+              
+              <form ref="form" @submit.stop.prevent="handleSubmit">
+               
+                
+                <label for="emailAddress" id="lbl"> Email Address</label>
+                <b-form-input
+                  id="emailaddress-input"
+                  v-model="emailAddress"
+                  :state="emailAddressState"
+                  required
+                ></b-form-input>
+                <label for="password" id="lbl">password</label>
+                <b-form-input
+                  id="password-input"
+                  v-model="value"
+                  @input="acceptNumber"
+                  required
+                  value="hide"
+                ></b-form-input>
+                
+
+                
+              </form>
+            </b-modal>
+ 
+      
+      
     </b-navbar-brand>
 
-    <b-navbar-toggle target="navbar-toggle-collapse" class="toggle-btn">
-      <template v-slot:default="{ expanded }">
-        <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
-        <b-icon v-else icon="chevron-bar-down"></b-icon>
-      </template>
-    </b-navbar-toggle>
+    
 
-    <b-collapse id="navbar-toggle-collapse" is-nav>
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item href="#" id="page">
-          <a @click="gotoHome()">Home</a>
-        </b-nav-item>
-        <b-nav-item href="#" id="page">
-          <a @click="gotoRegister()">Subscribe</a>
-        </b-nav-item>
-        <b-nav-item href="#" id="page">
-          <router-link to="/signin">Log in</router-link></b-nav-item
-        >
-        <b-nav-item href="#" id="page">
-          <router-link to="/signup">Log out</router-link></b-nav-item
-        >
-      </b-navbar-nav>
-    </b-collapse>
+
   </b-navbar>
 </template>
 
@@ -40,12 +88,16 @@ export default {
     return {};
   },
   methods: {
-    gotoHome() {
+    gotoFeature() {
       this.$router.push({ path: "/Feature" });
     },
-    gotoRegister() {
-      this.$router.push({ path: "/Subscribe" });
+    gotoAbout() {
+      this.$router.push({ path: "/About" });
+    },
+     gotoSecurity() {
+      this.$router.push({ path: "/Security" });
     }
+    
   }
   /*components: {
     Demo
@@ -68,4 +120,40 @@ export default {
   color: #2fcaba;
   font-size: 20px;
 }
+a {
+  padding:10px 20px;
+  margin-left:20px;
+  margin-top:24px
+}
+a:hover {
+  color:yellowgreen;
+  border-bottom-color:yellowgreen
+  
+}
+.before-header {
+  
+  padding-left: 450px;
+  
+}
+
+.phone {
+  color:silver;
+  margin-top: 0;
+
+
+}
+#password-input {
+  width: 250px;
+  margin-left: 30px;
+  height: 40px;
+  margin-top: 5px;
+}
+.chat {
+  background-color:red
+}
+.top-icon {
+  background: #2fcaba;
+  
+}
+
 </style>

@@ -70,6 +70,7 @@
                       >Human Resources management integrated to manage the staff
                       with payroy system
                     </span>
+                  
                   </p>
                 </a>
               </b-col>
@@ -144,7 +145,7 @@
             <b-container class="bv-example-row">
               <b-row>
                 <b-col>
-                  <b-card>
+                  <b-card class="card">
                   
                 
                      <b-img center src="https://www.bluebic.com/assets/images/simple.svg" alt="Center image" id="card-img"></b-img>
@@ -157,20 +158,20 @@
                       </b-card>
                 </b-col>
                 <b-col>
-                <b-card>
+                <b-card class="card">
                 <div class="img">
                     <b-img center src="https://www.bluebic.com/assets/images/flexible.svg" alt="Center image"></b-img>
                     </div>
                      <b-card-title>Flexible</b-card-title>
                       <b-card-text>
-                        Every school is different. BlueBic is designed to support Nursery, primary, secondary Schools of all sizes and structure, with customizable grading, report card systems and much more.
+                        Every school is different. Topnotch is designed to support Nursery, primary, secondary Schools of all sizes and structure, with customizable grading, report card systems and much more.
                       </b-card-text>
      
                       </b-card>
                      
                      </b-col>
                 <b-col>
-                <b-card>
+                <b-card class="card">
                     <b-img center src="https://www.bluebic.com/assets/images/reliable.svg" alt="Center image"></b-img>
                      <b-card-title>Reliable</b-card-title>
                       <b-card-text>
@@ -292,6 +293,12 @@
         </div>
        
       </div>
+      <div class="container_12">
+        <div class="grid_12">
+        
+        </div>
+        
+      </div>
        
 
     <div class="home-foot">
@@ -323,7 +330,7 @@ export default {
   },
   components: {
     Header,
-    Footer,
+    Footer
    // Form
   }
 };
@@ -335,7 +342,7 @@ export default {
   padding-left:50px;
 }
 .sch-logo {
-  background-color:blue;
+  background-color:azure;
   font-size:10px;
   height:80px;
   margin-top:25px;
@@ -396,7 +403,7 @@ h3 {
   color: white;
 }
 .heading {
-  margin-top: 180px;
+  margin-top: 280px;
   color: #007bff;
   font-size: 40px;
   font-weight: bold;
@@ -458,7 +465,7 @@ a:link {
   position: relative;
   top: 15px;
   padding-right: 30px;
-  font-size: 60px;
+  font-size: 80px;
   text-align: center;
   color: #007bff;
 }
@@ -517,8 +524,8 @@ a:link {
 }
 
 .para-detail {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 300;
   color: black;
   margin-top: 0;
   text-align: justify;
@@ -582,7 +589,7 @@ li {
 
  border-top:10px solid transparent;
   width:99%;
-  border-:130px /0px
+  border:130px /0px
 }
  #flag {
       width: 100%;
@@ -625,5 +632,9 @@ li {
      text-align:center;
      font-size:13px;
      color:white
+   }
+   .card {
+     height: 300px;
+     
    }
 </style>

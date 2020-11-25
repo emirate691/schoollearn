@@ -430,7 +430,8 @@ h5 {
 #firstname-input,
 #lastname-input,
 #emailaddress-input,
-#phonenumber-input {
+#phonenumber-input,
+#password-input {
   width: 400px;
   margin-left: 30px;
   height: 60px;
