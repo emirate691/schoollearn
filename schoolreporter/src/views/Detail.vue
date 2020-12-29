@@ -33,6 +33,11 @@
             >
               Continue</b-button
             >
+            <div class="mt-3">
+            
+            
+    </div>
+
             <b-modal
               id="modal-prevent-closing"
               @show="resetModal"
@@ -55,6 +60,7 @@
                   id="name-input"
                   v-model="name"
                   :state="nameState"
+                 
                   required
                 ></b-form-input>
 
@@ -91,6 +97,7 @@
                   id="phonenumber-input"
                   v-model="value"
                   @input="acceptNumber"
+                  :state="valueState"
                   required
                 ></b-form-input>
                 
@@ -101,7 +108,7 @@
                 </h6>
               </form>
             </b-modal>
-          </p>
+          
         </b-col>
       </b-row>
 
@@ -161,7 +168,7 @@
             <h5>Training</h5>
             <p id="deta">
               Define your ideal training model with your account manager.
-              BlueBic will train in-person, via web or/and by train-the-trainer
+              Topnotch will train in-person, via web or/and by train-the-trainer
               model.
             </p>
           </div>
@@ -183,6 +190,7 @@
               staff. There are also clear help docs and your account manager
               stays in touch with your school leadership
             </p>
+            
           </div>
         </b-col>
       </b-row>
@@ -200,45 +208,24 @@ export default {
   name: "Demo",
   data() {
     return {
+    
       name: "",
       school: "",
       firstName: "",
       lastName: "",
       emailAddress: "",
+      phone: "",
       value: "",
-      boxTwo: "",
       nameState: null,
       schoolState: null,
       firtNameState: null,
       lastNameState: null,
-      emailAddressState: null,
-      phone: null,
-      country: null,
-      bindProps: {
-        mode: "international",
-        defaultCountry: "FR",
-        disabledFetchingCountry: false,
-        disabled: false,
-        disabledFormatting: false,
-        placeholder: "Enter a phone number",
-        required: false,
-        enabledCountryCode: false,
-        enabledFlags: true,
-        preferredCountries: ["AU", "BR"],
-        onlyCountries: [],
-        ignoredCountries: [],
-        autocomplete: "off",
-        name: "telephone",
-        maxLen: 25,
-        wrapperClasses: "",
-        inputClasses: "",
-        dropdownOptions: {
-          disabledDialCode: false
-        },
-        inputOptions: {
-          showDialCode: false
-        }
-      },
+      emailaddress: null,
+      valueState: null,
+      
+    
+      
+
       submittedNames: []
     };
   },
@@ -257,18 +244,16 @@ export default {
     countryChanged(country) {
       this.country = "+" + country.dialCode;
     },
-    submit() {
-      console.log(this.phone);
-      console.log(this.country);
-    },
+   
 
     checkFormValidity() {
       const valid = this.$refs.form.checkValidity();
       this.nameState = valid;
       this.schoolState = valid;
-      this.firtNameState = valid;
+      this.firstNameState = valid;
       this.lastNameState = valid;
       this.emailAddressState = valid;
+      this.valueState = valid;
       return valid;
     },
     resetModal() {
@@ -279,9 +264,10 @@ export default {
       this.emailAddress = "";
       this.nameState = null;
       this.schoolState = null;
-      this.firtNameState = null;
+      this.firstNameState = null;
       this.lastNameState = null;
       this.emailAddressState = null;
+      this.valueState = null;
     },
     handleOk(bvModalEvt) {
       // Prevent modal from closing
@@ -301,22 +287,7 @@ export default {
         this.$bvModal.hide("modal-prevent-closing");
       });
     },
-    showMsgBoxTwo() {
-      this.boxTwo = "";
-      this.$bvModal
-        .msgBoxOk("Data was submitted successfully", {
-          title: "Confirmation",
-          size: "sm",
-          buttonSize: "sm",
-          okVariant: "success",
-          headerClass: "p-2 border-bottom-0",
-          footerClass: "p-2 border-top-0",
-          centered: true
-        })
-        .then(value => {
-          this.boxTwo = value;
-        });
-    }
+    
   },
   _components: {
     Header,
@@ -345,13 +316,13 @@ export default {
 h4 {
   color: #007bff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 400;
-  font-size: 40px;
+  font-weight: 600;
+  font-size: 60px;
 }
 p {
   text-align: center;
-  font-size: 21.5px;
-  font-weight: 400;
+  font-size: 25px;
+  font-weight: 600;
 }
 .right-para {
   text-align: justify;
@@ -445,6 +416,7 @@ h5 {
   background-color: aquamarine;
   padding-top: 0px;
 }
+
 #lbl {
   margin-top: 65px;
 }

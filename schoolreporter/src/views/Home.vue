@@ -147,10 +147,9 @@
                 <b-col>
                   <b-card class="card">
                   
-                
                      <b-img center src="https://www.bluebic.com/assets/images/simple.svg" alt="Center image" id="card-img"></b-img>
                      <b-card-title>simple</b-card-title>
-                      <b-card-text>
+                      <b-card-text class="card-text">
                   
                        Topnotch is simple, intuitive, and mobile friendly. The intuitive interface negates the need for constant training and maximises usage.
                       </b-card-text>
@@ -163,7 +162,7 @@
                     <b-img center src="https://www.bluebic.com/assets/images/flexible.svg" alt="Center image"></b-img>
                     </div>
                      <b-card-title>Flexible</b-card-title>
-                      <b-card-text>
+                      <b-card-text class="card-text"> 
                         Every school is different. Topnotch is designed to support Nursery, primary, secondary Schools of all sizes and structure, with customizable grading, report card systems and much more.
                       </b-card-text>
      
@@ -174,7 +173,7 @@
                 <b-card class="card">
                     <b-img center src="https://www.bluebic.com/assets/images/reliable.svg" alt="Center image"></b-img>
                      <b-card-title>Reliable</b-card-title>
-                      <b-card-text>
+                      <b-card-text class="card-text">
                         Topnotch is built with the best technological tools, database, standards and platforms, guaranteeing security, speed and a 99.99% uptime.
                       </b-card-text>
      
@@ -399,11 +398,11 @@ h3 {
   font-weight: bold;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin-top: 350px;
+  margin-top: 250px;
   color: white;
 }
 .heading {
-  margin-top: 280px;
+  margin-top: 360px;
   color: #007bff;
   font-size: 40px;
   font-weight: bold;
@@ -446,12 +445,13 @@ a:link {
 .content {
   background-image: url("https://res.cloudinary.com/ddxgfwoao/image/upload/q_auto:eco/v1593438038/1.jpg");
   /*background-color: #cccfff;*/
-  height: 1000px;
+  height: 700px;
   background-blend-mode: soft-light;
   background-size: 100%;
   background-repeat: no-repeat;
   /*position: relative;*/
-  width:992px
+  width:992px;
+  
   
 }
 .fa-chart-bar,
@@ -465,9 +465,12 @@ a:link {
   position: relative;
   top: 15px;
   padding-right: 30px;
-  font-size: 80px;
+  font-size: 70px;
   text-align: center;
   color: #007bff;
+}
+ .fa-chart-bar a:hover  {
+  background-color: red
 }
 .section-head {
   color: #007bff;
@@ -524,7 +527,6 @@ a:link {
 }
 
 .para-detail {
-  font-size: 16px;
   font-weight: 300;
   color: black;
   margin-top: 0;
@@ -540,6 +542,7 @@ a:link {
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 .line-1 {
   margin-top: 30px;
@@ -634,7 +637,13 @@ li {
      color:white
    }
    .card {
-     height: 300px;
+     height: 312px;
      
+     
+   }
+   .card-text {
+     
+     text-align:justify;
+     word-spacing: 0.1em;
    }
 </style>

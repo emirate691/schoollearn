@@ -1,10 +1,16 @@
 <template>
   <div class="footer">
     <div class="sub-footer">
-      <p id="footer-top-para">
-        start growing with <br /><br /><span class="top-pic">Topnotch</span>
-      </p>
+      <div >
+    
+      <p id="footer-top-para"> 
+      
+        
+    start growing with <br /><span class="top-pic">TopNotch</span></p>
+      </div>
+      
       <div class="footer-btn-started">
+        
         <b-button id="contents-1-btn" variant="warning" @click="gotoPage()"
           >Get Started</b-button
         ><br /><br />
@@ -98,12 +104,29 @@ export default {
   float: left;
   margin-left: 40px;
   margin-top: 70px;
+  color:rgb(41, 41, 35);
+  text-align: justify;
+  font-size:20px
+  
+}
+.footer-top-para-1 {
+ border-right: 3px solid beige;
+ height: 100px;
+ border-spacing: 3px;
+
+ 
+ 
 }
 
 .top-pic {
   font-weight: 600;
-  font-size: 25px;
+  font-size: 35px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:rgb(41, 41, 35)
 }
+  
+  
+
 .foot {
   color: black;
   font-size: 25px;
